@@ -1,5 +1,5 @@
 import NavBar from './NavBar';
-import DrawerBar from './DrawerBar';
+import NavBarMobile from './NavBarMobile';
 import { Box } from '@mui/material';
 import links from '../contstants/links';
 
@@ -7,6 +7,7 @@ function Layout({ children }) {
   return (
     <>
       <NavBar links={links} />
+      <NavBarMobile links={links} />
       <Box
         component='main'
         sx={{
