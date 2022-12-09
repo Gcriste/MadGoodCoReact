@@ -17,13 +17,13 @@ const AboutView = () => {
         sm={2}
         sx={{ display: 'flex', justifyContent: 'center' }}
       >
-        <Typography variant='h4'>The band</Typography>
+        <Typography variant="h4">The band</Typography>
       </Grid>
-      <Grid container justifyContent='space-around' py='16px'>
+      <Grid container justifyContent="space-around" py="16px">
         <Grid item xs={12} sm={6}>
           <Card>
             <Box
-              padding='8px'
+              padding="8px"
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -31,8 +31,8 @@ const AboutView = () => {
               }}
             >
               <img
-                width='100%'
-                height='100%'
+                width="100%"
+                height="100%"
                 src={img}
                 alt={'photo of the band'}
               />
@@ -42,7 +42,7 @@ const AboutView = () => {
         <Grid item xs={12} sm={4}>
           <Card>
             <Box
-              padding='8px'
+              padding="8px"
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -54,15 +54,15 @@ const AboutView = () => {
                   alignItems: 'center',
                   justifyContent: 'center',
                 }}
-                variant='h7'
+                variant="h7"
                 marginTop={{ xs: '24px' }}
               >
-                The members of Maddie in Good Company met in the winter of 2018
-                at a Janis Joplin tribute show in Nashville, TN. With magic in
-                the air and music in their hearts the Soul n' Roll band was
-                formed. Over the last 4 years they have played historic venues,
-                released 4 songs and are in the process of writing and recording
-                an album.
+                The members of little ole Maddie in Good Company met in the
+                winter of 2018 at a Janis Joplin tribute show in Nashville, TN.
+                With magic in the air and music in their hearts the Soul n' Roll
+                band was formed. Over the last 4 years they have played historic
+                venues, released 4 songs and are in the process of writing and
+                recording an album.
               </Typography>
               <Box
                 sx={{
