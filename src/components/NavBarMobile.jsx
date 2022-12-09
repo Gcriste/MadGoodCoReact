@@ -32,31 +32,58 @@ const NavBarMobile = ({ links }) => {
         >
           MadGoodCo
         </Link>
-        {links.map(({ text, href, 'data-testid': dataTestId, icon }) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <Link
-                onClick={handleDrawerToggle}
-                component={RouterLink}
-                key={href}
-                to={href}
-                color='black'
-                underline='hover'
-                aria-current={href === location.pathname ? 'page' : undefined}
-                sx={{
-                  cursor: 'pointer',
-                  marginLeft: '10px',
-                  marginRight: '10px',
-                  fontWeight: href === location.pathname ? 'bold' : 'none',
-                }}
-                data-testid={dataTestId}
-              >
-                <ListItemIcon>{icon}</ListItemIcon>
-                {text}
-              </Link>
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {links.map(
+          ({ text, href, 'data-testid': dataTestId, icon, target, rel }) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                {target ? (
+                  <a
+                    target={target}
+                    rel={rel}
+                    href={href}
+                    style={{
+                      cursor: 'pointer',
+                      marginLeft: '10px',
+                      marginRight: '10px',
+                      fontWeight: href === location.pathname ? 'bold' : 'none',
+                      color: 'black',
+                      textDecoration: 'none',
+                      display: 'flex',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <ListItemIcon>{icon}</ListItemIcon> {text}
+                  </a>
+                ) : (
+                  <Link
+                    onClick={handleDrawerToggle}
+                    component={RouterLink}
+                    key={href}
+                    to={href}
+                    color='black'
+                    underline='hover'
+                    aria-current={
+                      href === location.pathname ? 'page' : undefined
+                    }
+                    sx={{
+                      cursor: 'pointer',
+                      marginLeft: '10px',
+                      marginRight: '10px',
+                      fontWeight: href === location.pathname ? 'bold' : 'none',
+                      display: 'flex',
+                      alignItems: 'center',
+                    }}
+                    data-testid={dataTestId}
+                    target={target}
+                  >
+                    <ListItemIcon>{icon}</ListItemIcon>
+                    {text}
+                  </Link>
+                )}
+              </ListItemButton>
+            </ListItem>
+          )
+        )}
       </List>
     </div>
   );

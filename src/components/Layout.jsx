@@ -1,5 +1,6 @@
 import NavBar from './NavBar';
 import NavBarMobile from './NavBarMobile';
+import Footer from './Footer';
 import { Box } from '@mui/material';
 import links from '../contstants/links';
 
@@ -25,6 +26,7 @@ function Layout({ children }) {
           {children}
         </Box>
       </Box>
+      <Footer />
     </>
   );
 }

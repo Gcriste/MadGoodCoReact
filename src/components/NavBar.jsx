@@ -34,25 +34,44 @@ const NavBar = ({ links }) => {
             justifyContent: 'center',
           }}
         >
-          {links.map(({ text, href, 'data-testid': dataTestId }) => (
-            <Link
-              component={RouterLink}
-              key={href}
-              to={href}
-              color='#fff'
-              underline='hover'
-              aria-current={href === location.pathname ? 'page' : undefined}
-              sx={{
-                cursor: 'pointer',
-                marginLeft: '10px',
-                marginRight: '10px',
-                fontWeight: href === location.pathname ? 'bold' : 'none',
-              }}
-              data-testid={dataTestId}
-            >
-              {text}
-            </Link>
-          ))}
+          {links.map(({ text, href, 'data-testid': dataTestId, target, rel }) =>
+            target ? (
+              <a
+                target={target}
+                rel={rel}
+                href={href}
+                style={{
+                  cursor: 'pointer',
+                  marginLeft: '10px',
+                  marginRight: '10px',
+                  fontWeight: href === location.pathname ? 'bold' : 'none',
+                  color: '#fff',
+                  textDecoration: 'none',
+                }}
+              >
+                {text}
+              </a>
+            ) : (
+              <Link
+                component={RouterLink}
+                key={href}
+                to={href}
+                color='#fff'
+                underline='hover'
+                aria-current={href === location.pathname ? 'page' : undefined}
+                sx={{
+                  cursor: 'pointer',
+                  marginLeft: '10px',
+                  marginRight: '10px',
+                  fontWeight: href === location.pathname ? 'bold' : 'none',
+                }}
+                data-testid={dataTestId}
+                target={target}
+              >
+                {text}
+              </Link>
+            )
+          )}
         </Box>
       </Box>
     </>
