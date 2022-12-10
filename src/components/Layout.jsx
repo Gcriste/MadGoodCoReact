@@ -11,21 +11,24 @@ function Layout({ children }) {
       <NavBar links={links} />
       <NavBarMobile links={links} />
       <Box
-        component='main'
+        component="main"
         sx={{
           display: 'flex',
           flex: '1 auto',
-          backgroundImage: `url(${bg})`,
+          // backgroundImage: `url(${bg})`,
+          background: '#2D2D30',
         }}
-        style={{
-          background: 'linear-gradient(to left, #414345, #232526)',
-        }}
+        style={
+          {
+            // background: 'linear-gradient(to left, #414345, #232526)',
+          }
+        }
       >
         <Box
           sx={{
             margin: '0 auto',
-            maxWidth: '1040px',
-            padding: '48px 16px',
+            // maxWidth: '1600px',
+            padding: '16px',
           }}
         >
           {children}

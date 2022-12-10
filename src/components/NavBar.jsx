@@ -8,7 +8,7 @@ const NavBar = ({ links }) => {
     <>
       <Box
         sx={{
-          background: '#2d2d30',
+          background: 'rgba(170,186,205,.2)',
           padding: '30px',
           flexDirection: 'row',
           justifyContent: 'space-between',
@@ -17,13 +17,13 @@ const NavBar = ({ links }) => {
         }}
       >
         <Link
-          variant='h4'
+          variant="h4"
           component={RouterLink}
           key={'/'}
           to={'/'}
           sx={{ textAlign: 'left' }}
-          color='#fff'
-          underline='none'
+          color="black"
+          underline="none"
         >
           MadGoodCo
         </Link>
@@ -45,7 +45,7 @@ const NavBar = ({ links }) => {
                   marginLeft: '10px',
                   marginRight: '10px',
                   fontWeight: href === location.pathname ? 'bold' : 'none',
-                  color: '#fff',
+                  color: 'black',
                   textDecoration: 'none',
                 }}
               >
@@ -56,8 +56,8 @@ const NavBar = ({ links }) => {
                 component={RouterLink}
                 key={href}
                 to={href}
-                color='#fff'
-                underline='hover'
+                color="black"
+                underline="hover"
                 aria-current={href === location.pathname ? 'page' : undefined}
                 sx={{
                   cursor: 'pointer',

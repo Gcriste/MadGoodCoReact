@@ -7,7 +7,7 @@ const AboutView = () => {
     <Box
       textAlign={{ xs: 'center', sm: 'unset' }}
       sx={{
-        background: 'rgba(170,186,205,.2)',
+        background: '#2D2D30',
         padding: '16px',
       }}
     >
@@ -15,12 +15,16 @@ const AboutView = () => {
         item
         xs={12}
         sm={2}
-        sx={{ display: 'flex', justifyContent: 'center' }}
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          color: 'white',
+        }}
       >
         <Typography variant="h4">The band</Typography>
       </Grid>
       <Grid container justifyContent="space-around" py="16px">
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{ mt: '24px' }}>
           <Card>
             <Box
               padding="8px"
@@ -39,7 +43,7 @@ const AboutView = () => {
             </Box>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={4} sx={{ mt: '24px' }}>
           <Card>
             <Box
               padding="8px"
@@ -55,7 +59,6 @@ const AboutView = () => {
                   justifyContent: 'center',
                 }}
                 variant="h7"
-                marginTop={{ xs: '24px' }}
               >
                 The members of little ole Maddie in Good Company met in the
                 winter of 2018 at a Janis Joplin tribute show in Nashville, TN.

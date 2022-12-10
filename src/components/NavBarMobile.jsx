@@ -21,13 +21,13 @@ const NavBarMobile = ({ links }) => {
       <Toolbar />
       <List>
         <Link
-          variant='h4'
+          variant="h4"
           component={RouterLink}
           key={'/'}
           to={'/'}
           sx={{ ml: 2 }}
-          color='black'
-          underline='none'
+          color="black"
+          underline="none"
           onClick={handleDrawerToggle}
         >
           MadGoodCo
@@ -60,8 +60,8 @@ const NavBarMobile = ({ links }) => {
                     component={RouterLink}
                     key={href}
                     to={href}
-                    color='black'
-                    underline='hover'
+                    color="black"
+                    underline="hover"
                     aria-current={
                       href === location.pathname ? 'page' : undefined
                     }
@@ -91,7 +91,7 @@ const NavBarMobile = ({ links }) => {
     <>
       <Box
         sx={{
-          background: '#2d2d30',
+          background: 'rgba(170,186,205,.2)',
           padding: '30px',
           flexDirection: 'row',
           justifyContent: 'space-between',
@@ -106,22 +106,22 @@ const NavBarMobile = ({ links }) => {
           }}
         >
           <IconButton
-            aria-label='open drawer'
-            edge='start'
+            aria-label="open drawer"
+            edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, color: '#fff' }}
+            sx={{ mr: 2, color: 'black' }}
           >
             <MenuIcon />
           </IconButton>
         </Box>
       </Box>
       <Box
-        component='nav'
+        component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label='mailbox folders'
+        aria-label="mailbox folders"
       >
         <Drawer
-          variant='temporary'
+          variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
