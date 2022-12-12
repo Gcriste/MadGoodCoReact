@@ -16,3 +16,35 @@ body {
 a:hover {
   text-decoration: underline !important;
 }
+
+@media (min-width: 600px) {
+  .banner-image {
+    /* The image used */
+    background-image: url('./images/underdog.jpg');
+
+    /* Set a specific height */
+    min-height: 700px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-image {
+    /* The image used */
+    background-image: url('./images/underdog.jpg');
+
+    /* Set a specific height */
+    min-height: 700px;
+
+    /* Create the parallax scrolling effect */
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
