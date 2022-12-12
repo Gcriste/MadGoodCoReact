@@ -29,6 +29,7 @@ function Layout({ children }) {
             margin: '0 auto',
             // maxWidth: '1600px',
             padding: '16px',
+            width: '100%',
           }}
         >
           {children}
